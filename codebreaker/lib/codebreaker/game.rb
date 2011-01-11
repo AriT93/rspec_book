@@ -4,9 +4,15 @@ module Codebreaker
     def initialize(output)
       @output = output
     end
-    def start
+    def start(secret)
+      @secret=secret
       @output.puts 'Welcome to Codebreaker!'
       @output.puts 'Enter Guess:'
     end
-  end
+
+    def guess(guess)
+      marker = Marker.new(@secret,guess)
+      @output.puts '+'*marker.exact_match_count + '-'*marker.number_match_count
+    end
+
 end
