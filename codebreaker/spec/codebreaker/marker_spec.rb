@@ -26,7 +26,7 @@ module Codebreaker
 
       context "with 1 exact match and 1 number match" do
         it "returns 1" do
-          marker = Marker.new('1234','1525')
+          marker = Marker.new('1234','1526')
           marker.exact_match_count.should == 1
         end
       end

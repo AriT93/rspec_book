@@ -19,7 +19,6 @@ module Codebreaker
       @guess.split('').inject(0) do |count, n|
         count + (delet_first(secret,n) ? 1 : 0)
       end
-      count
     end
 
     def delet_first(code, n)
